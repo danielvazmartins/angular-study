@@ -1,0 +1,9 @@
+<div class="row">	
+	<h4 class="teal-text center">My Heroes</h4>
+	<div class="collection with-header">		
+		<a class="collection-item" [class.active]="hero === selectedHero" *ngFor="let hero of heroes" (click)="onSelect(hero)">
+			<span>{{hero.id}} - </span>{{hero.name}}
+		</a>
+	</div>
+</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
