@@ -1,0 +1,15 @@
+<div *ngIf="messageService.messages.length">
+
+	<h4 class="teal-text center">Messages</h4>
+
+	<ul class="collection" *ngFor='let message of messageService.messages'>
+		<li class="collection-item deep-orange lighten-4
+ deep-orange-text text-darken-4">{{message}}</li>
+	</ul>
+	<div class="center-align">
+		<button class="waves-effect waves-light btn" (click)="messageService.clear()">
+	    	<i class="material-icons left">delete</i>Limpar Mensagens   	
+	    </button>
+	</div>
+
+</div>

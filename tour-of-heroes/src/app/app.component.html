@@ -4,6 +4,13 @@
     </div>
 </nav>
 <div class="container">
-    <app-heroes></app-heroes>
+	<div class="row center">
+		<br/>
+		<a routerLink="/" class="waves-effect waves-light btn">Dashboard</a>
+		<a routerLink="/heroes" class="waves-effect waves-light btn">Heroes</a>
+	</div>
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+    <br/>
 </div>
 

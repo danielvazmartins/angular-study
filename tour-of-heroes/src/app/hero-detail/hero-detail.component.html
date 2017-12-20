@@ -1,11 +1,11 @@
 <div *ngIf="hero">
-	<div class="card-panel">
-		<span>{{ hero.name | uppercase }} Details</span>
-	</div>
-	<div class="row">
-	    <div class="input-field">
-	        <input [(ngModel)]="hero.name" placeholder="Name" id="name" type="text">
-	        <label for="name">Hero name</label>
-	    </div>
+	<div class="card">
+		<div class="card-content">
+			<span class="card-title teal-text center">{{ hero.name }} Details</span>	
+			<div class="input-field">
+		        <input [(ngModel)]="hero.name" id="name" type="text">
+		        <label for="name" class="active">Hero name</label>
+		    </div>
+		</div>
 	</div>
 </div>
