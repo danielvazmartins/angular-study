@@ -9,10 +9,12 @@ import { HeroService } from '../hero.service';
 })
 export class DashboardComponent implements OnInit {
 
-	getHeroes(): void {
-	    this.heroService.getHeroes()
-		.subscribe(heroes => this.heroes = heroes.slice(1,5));
-	}
+    heroes: Hero[] = [];
+
+    getHeroes(): void {
+        this.heroService.getHeroes()
+    	.subscribe(heroes => this.heroes = heroes.slice(1,5));
+    }
 
   	constructor(private heroService: HeroService) { }
 
