@@ -1,0 +1,13 @@
+<div class="row">	
+	<h4 class="teal-text center">Hero Search</h4>
+	<div class="input-field">
+		<i class="material-icons prefix">search</i>
+        <input id="search-box" #searchBox type="text" (keyup)="searchHero(searchBox.value)">  
+        <label for="search-box">Pesquisar</label>     
+    </div>
+	<div class="collection">		
+		<a class="collection-item" *ngFor="let hero of heroes$ | async" routerLink="/detail/{{hero.id}}">
+			<span class="badge left">{{hero.id}}</span>{{hero.name}}
+		</a>
+	</div>
+</div>
