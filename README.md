@@ -13,12 +13,16 @@ ng new my-app
 cd my-app
 ng serve --open
 
-## hello-world
+## Projetos
+
+### hello-world
 Primeiro projeto utilizando a nova versão do Angular
 
-## tour-of-heroes
+### tour-of-heroes
 Projeto seguindo o tutorial do site oficial
 https://angular.io/tutorial
 
 ## Fontes
 https://angular.io/guide/quickstart
+https://angular.io/tutorial
+https://github.com/angular/angular-cli
