@@ -5,8 +5,9 @@ import { PainelComponent } from './painel/painel.component';
 import { ClientesComponent } from './clientes/clientes.component';
 
 const adminRoutes: Routes = [
-  { path: 'admin', component: AdminComponent, 
+  { path: '', component: AdminComponent,
     children: [
+      { path: '', redirectTo: 'painel', pathMatch: 'full'},
       { path: 'painel', component: PainelComponent },
       { path: 'clientes', component: ClientesComponent }
   ]},

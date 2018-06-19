@@ -1,8 +1,10 @@
-<h2>VideoPicker</h2>
-<div class="painel">
-    <a class='button' routerLink='/client/videopicker/dashboard'>Dashboard</a>
-    <a class='button' routerLink='/client/videopicker/produtos'>Produtos</a>
+<div class="container">
+    <div class="sidenav">
+        <h2 class="title">VideoPicker</h2>
+        <a class='button' routerLink='/client/videopicker/dashboard'>Dashboard</a>
+        <a class='button' routerLink='/client/videopicker/produtos'>Produtos</a>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
 </div>
-<br><br>
-<h2>Pagina filha</h2>
-<router-outlet></router-outlet>

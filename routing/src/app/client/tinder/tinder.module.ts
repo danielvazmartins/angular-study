@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VideopickerComponent } from './videopicker.component';
+import { TinderComponent } from './tinder.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ListaComponent } from './lista/lista.component';
 import { RouterModule } from '@angular/router';
-import { ProdutosComponent } from './produtos/produtos.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule
   ],
-  declarations: [ VideopickerComponent, DashboardComponent, ProdutosComponent ]
+  declarations: [TinderComponent, DashboardComponent, ListaComponent]
 })
-export class VideopickerModule { }
+export class TinderModule { }

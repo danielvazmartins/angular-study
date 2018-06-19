@@ -1,10 +1,11 @@
-<h3>Client</h3>
-<div class="painel">
-    <a class='button' routerLink='/client/painel'>Painel</a>
-    <a class='button' routerLink='/client/produtos'>Produtos</a>
-    <a class='button' routerLink='/client/videopicker'>VideoPicker</a>
-    <a class='button' routerLink='/login'>Logout</a>
+<div class="container">
+    <div class="minisidenav">
+        <h3 class="title">Client</h3>
+        <a class='button' routerLink='/client/videopicker'>V</a>
+        <a class='button' routerLink='/client/tinder'>T</a>
+        <a class='button' routerLink='/login'><-</a>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
 </div>
-<br><br>
-<h2>Pagina filha</h2>
-<router-outlet></router-outlet>

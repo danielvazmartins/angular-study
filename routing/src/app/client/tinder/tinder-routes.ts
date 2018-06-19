@@ -1,9 +1,9 @@
 import { Routes } from "@angular/router";
 import { DashboardComponent } from "./dashboard/dashboard.component";
-import { ProdutosComponent } from "./produtos/produtos.component";
+import { ListaComponent } from "./lista/lista.component";
 
-export const videoPickerRoutes: Routes = [
+export const tinderRoutes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent },
-    { path: 'produtos', component: ProdutosComponent}
+    { path: 'lista', component: ListaComponent}
 ];

@@ -1,19 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 .painel {
     display: block;
     background: #e4effb;
     text-align: center;
+    width: 80%;
+    margin: auto; 
 }
 
 .button {
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     margin: 20px;
     background: #59b2f1;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     color: #0303bf;
 }
 
+.title {
+    text-align: center;
+}
+
+.container {
+    background: grey;
+    display: flex;
+    height: 100%;
+}
+
+.minisidenav {
+    background: pink;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100px;
+}
+
+.minisidenav .button {
+    background: darkblue;
+    color: white;
+    border-radius: 5px;
+}
+
 .sidenav {
-    width: 200px;
+    background: #e4effb;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+}
+
+.content {
+    background: yellow;
+    flex: 1;
 }

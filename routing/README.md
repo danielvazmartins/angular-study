@@ -27,11 +27,17 @@ ng g c client/produtos --spec=false
 # Videopicker
 ng g c client/videopicker --spec=false
 ng g m client/videopicker/videopicker --flat --spec=false
-ng g m client/videopicker/videopicker-routing --flat --spec=false
 ng g c client/videopicker/dashboard --spec=false
 ng g c client/videopicker/produtos --spec=false
+
+# Tinder 
+ng g c client/tinder --spec=false
+ng g m client/tinder/tinder --flat --spec=false
+ng g c client/tinder/dashboard --spec=false
+ng g c client/tinder/lista --spec=false
 
 
 ## Fontes
 https://angular.io/tutorial/toh-pt5
 https://angular.io/guide/router
+https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G 

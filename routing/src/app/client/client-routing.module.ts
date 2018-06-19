@@ -1,24 +1,17 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './client.component';
-import { PainelComponent } from './painel/painel.component';
-import { ProdutosComponent } from './produtos/produtos.component';
 import { VideopickerComponent } from './videopicker/videopicker.component';
-import { VideopickerRoutingModule } from './videopicker/videopicker-routing.module';
-import { DashboardComponent } from './videopicker/dashboard/dashboard.component';
 import { videoPickerRoutes } from './videopicker/videopicker-routes';
+import { TinderComponent } from './tinder/tinder.component';
+import { tinderRoutes } from './tinder/tinder-routes';
 
 const clientRoutes: Routes = [
-  { path: 'client', component: ClientComponent,
+  { path: '', component: ClientComponent,
     children: [
-      { path: 'painel', component: PainelComponent },
-      { path: 'produtos', component: ProdutosComponent },
-      { path: 'videopicker', component: VideopickerComponent, children: videoPickerRoutes }
-      /*{ path: 'videopicker', component: VideopickerComponent,
-        children: [
-          { path: 'dashboard', component: DashboardComponent },
-          { path: 'produtos', component: ProdutosComponent }
-      ]}*/
+      { path: '', redirectTo: 'videopicker', pathMatch: 'full' },
+      { path: 'videopicker', component: VideopickerComponent, children: videoPickerRoutes },
+      { path: 'tinder', component: TinderComponent, children: tinderRoutes }
   ]}
 ];
 
