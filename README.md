@@ -8,12 +8,14 @@ npm install -g @angular/cli
 
 - Criando um novo projeto
 ng new my-app
+ng new my-app --style=scss (utilizar o sass)
+ng new my-app --skip-tests (não criar os arquivos de testes)
 
 - Executar o projeto
 cd my-app
 ng serve
 ng serve --open
-ng serve --port
+ng serve --port=XXXX
 
 - Criar um componente
 ng generate component comp1
@@ -33,6 +35,10 @@ Projeto utilizado para testar e estudar as funcionalidades de rotas do Angular
 https://www.youtube.com/watch?v=tPOMG0D57S0&list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G
 https://loiane.training/course/angular/ 
 https://angular.io/guide/router
+
+### material
+Projeto utilizado para testar e estudar a instalação e funcionalidades do Angular Material
+https://material.angular.io/
 
 ## Fontes
 https://angular.io/guide/quickstart
