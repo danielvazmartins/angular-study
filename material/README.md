@@ -27,3 +27,4 @@ adicionar o link no index.html
 
 ## Fontes
 https://material.angular.io/guide/getting-started
+https://material.io/tools/icons/?style=baseline
