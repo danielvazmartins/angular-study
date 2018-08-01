@@ -10,12 +10,18 @@ npm install -g @angular/cli
 ng new my-app
 ng new my-app --style=scss (utilizar o sass)
 ng new my-app --skip-tests (não criar os arquivos de testes)
+ng new my-app --skip-git (no inicializa o git no repositorio, no caso de estar dentro de um repositorio)
 
 - Executar o projeto
 cd my-app
 ng serve
 ng serve --open
 ng serve --port=XXXX
+
+- Compilar o projeto para produçao
+ng build
+    --prod (configura a variavel de ambiente para producao - TESTAR)
+    --aot (deixa os arquivos menores)
 
 - Criar um componente
 ng generate component comp1
