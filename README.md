@@ -46,6 +46,9 @@ https://angular.io/guide/router
 Projeto utilizado para testar e estudar a instalação e funcionalidades do Angular Material
 https://material.angular.io/
 
+## Projetos para verificar
+- ng-bootstrap [https://ng-bootstrap.github.io]
+
 ## Fontes
 https://angular.io/guide/quickstart
 https://angular.io/tutorial
