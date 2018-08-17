@@ -1,0 +1,8 @@
+<div class="text-center" *ngIf="!photos.length">Sorry, no photos found!</div>
+<ol class="list-unstyled row">
+    <li *ngFor="let row of rows" class="row">
+        <div *ngFor="let photo of row" class="col-4">
+            <app-photo url="{{photo.url}}" description="{{description}}"></app-photo>
+        </div>
+    </li>
+</ol>
