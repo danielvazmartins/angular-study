@@ -15,6 +15,8 @@ https://cursos.alura.com.br/course/angular-fundamentos
 ```bash
 # Adicionar o bootstrap (obs.: precisa reiniciar o Angular)
 npm install bootstrap --save
+# Adicionar FontAwesome
+npm install font-awesome
 ```
 
 ## Fontes

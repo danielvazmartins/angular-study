@@ -1,8 +1,14 @@
 <div class="text-center" *ngIf="!photos.length">Sorry, no photos found!</div>
-<ol class="list-unstyled row">
-    <li *ngFor="let row of rows" class="row">
-        <div *ngFor="let photo of row" class="col-4">
-            <app-photo url="{{photo.url}}" description="{{description}}"></app-photo>
+<ol class="list-unstyled">
+    <li *ngFor="let row of rows" class="row no-gutters">
+        <div *ngFor="let photo of row" class="col-4" appDarkenOnHover>
+            <app-card>
+                <app-photo url="{{photo.url}}" description="{{description}}"></app-photo>
+                <div class="text-center p-1">
+                    <i class="fa fa-heart-o fa-1x mr-2" aria-hidden="true">{{photo.likes}}</i>
+                    <i class="fa fa-comment-o fa-1x mr-2 ml-2" aria-hidden="true">{{photo.comments}}</i>
+                </div>
+            </app-card>
         </div>
     </li>
 </ol>

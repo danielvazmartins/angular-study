@@ -1,0 +1,12 @@
+<div class="text-center mt-3 mb-3">
+    <form>
+        <i class="fa fa-search mr-1" aria-hidden="true"></i>
+        <input 
+            class="rounded" 
+            autofocus 
+            type="search"
+            placeholder="serach..."
+            (keyup)="debounce.next($event.target.value)"
+            [value]="value">
+    </form>
+</div>
