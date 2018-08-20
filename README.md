@@ -46,6 +46,10 @@ https://angular.io/guide/router
 Projeto utilizado para testar e estudar a instalação e funcionalidades do Angular Material
 https://material.angular.io/
 
+### chart-ng2-charts
+Componente para criação de gráficos. Projeto utilizado para testar e estudar a instalação e funcionalidades do ng2-charts
+https://valor-software.com/ng2-charts/
+
 ## Projetos para verificar
 - ng-bootstrap [https://ng-bootstrap.github.io]
 
