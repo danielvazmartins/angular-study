@@ -1,0 +1,20 @@
+:host {
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 3px #ccc;
+
+    .title {
+        margin-bottom: 5px;
+        color: #3949AB;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .body {
+        color: #424242;
+    }
+}

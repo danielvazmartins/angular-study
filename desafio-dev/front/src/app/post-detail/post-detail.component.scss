@@ -1,0 +1,20 @@
+:host {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 3px #ccc;
+    display: block;
+
+    .title {
+        margin-bottom: 5px;
+        color: #3949AB;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .body {
+        color: #424242;
+    }
+}
