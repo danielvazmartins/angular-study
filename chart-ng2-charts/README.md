@@ -15,3 +15,4 @@ npm install chart.js
 ## Fontes
 https://valor-software.com/ng2-charts/
 https://github.com/valor-software/ng2-charts
+https://alligator.io/angular/chartjs-ng2-charts/

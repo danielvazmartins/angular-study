@@ -1,5 +1,13 @@
-<h1>ng2-charts</h1>
+<h1 class="title">ng2-charts</h1>
+<div class="options">
+  <select [(ngModel)]="chartType">
+    <option *ngFor="let type of chartTypes" value="{{type}}">{{type}}</option>
+  </select>
+</div>
 <div>
-  <canvas baseChart width="400" height="400" chartType="line" [data]="chartLine.data" [labels]="chartLine.labels"></canvas>
+  <canvas baseChart [chartType]="chartType" [data]="chartOne.data" [labels]="chartOne.labels" [legend]="false"></canvas>
+</div>
+<div>
+  <canvas baseChart [chartType]="chartType" [datasets]="chartTwo.data" [labels]="chartTwo.labels" [legend]="false"></canvas>
 </div>
 

@@ -1,5 +1,4 @@
 # Alurapic
-
 Aplicação criada para acompanhar o curso da Alura 
 https://cursos.alura.com.br/course/angular-fundamentos
 
