@@ -18,6 +18,7 @@ import { RequestInterceptor } from './auth/request.interceptor';
     ],
     providers: [
         {
+            // Intercepta as conexões para adicionar o token no cabeçalho
             provide: HTTP_INTERCEPTORS,
             useClass: RequestInterceptor,
             multi: true
