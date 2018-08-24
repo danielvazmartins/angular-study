@@ -51,7 +51,8 @@ Componente para criação de gráficos. Projeto utilizado para testar e estudar 
 https://valor-software.com/ng2-charts/
 
 ## Projetos para verificar
-- ng-bootstrap [https://ng-bootstrap.github.io]
+- ng-bootstrap <https://ng-bootstrap.github.io>
+- Angular Universal <https://angular.io/guide/universal>
 
 ## Fontes
 https://angular.io/guide/quickstart

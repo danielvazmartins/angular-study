@@ -5,6 +5,7 @@ import { Photo } from './photo';
 
 const API = 'http://localhost:3000/'
 
+// Utiliza o providedIn: 'root' para deixar disponibilizar o serviço em qualquer lugar sem utilizar o provider
 @Injectable({ providedIn: 'root' })
 export class PhotoService {
     constructor(public http: HttpClient) {

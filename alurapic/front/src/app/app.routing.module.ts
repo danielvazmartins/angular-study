@@ -7,6 +7,13 @@ import { PhotoListResolve } from './photos/photo-list/photo-list.resolve';
 
 const routes:Routes = [
     { 
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home'
+    },{
+        path: 'home',
+        loadChildren: './home/home.module#HomeModule'
+    },{ 
         path: 'user/:userName', 
         component: PhotoListComponent, 
         resolve: {
@@ -19,7 +26,8 @@ const routes:Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes) // Usa url history API por default
+        //RouterModule.forRoot(routes, { useHash: true}) // Usa # no formato da Url
     ],
     exports: [
         RouterModule

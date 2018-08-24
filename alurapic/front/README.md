@@ -21,3 +21,5 @@ npm install font-awesome
 ## Fontes
 https://www.npmjs.com/package/bootstrap
 https://getbootstrap.com/
+http://calebb.net/ -> Decodificador online de token do formato JWT(Json Web Token)
+https://github.com/auth0/jwt-decode
