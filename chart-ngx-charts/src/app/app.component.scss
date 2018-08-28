@@ -1,0 +1,22 @@
+:host {
+    .title {
+        background: #ccc;
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #131010;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        .box-chart {
+            flex: 1;
+
+            .sub-title {
+                padding: 10px;
+            }
+        }
+    }
+}

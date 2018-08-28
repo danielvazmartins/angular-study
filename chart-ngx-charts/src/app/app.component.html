@@ -1,0 +1,36 @@
+<h1 class="title">NGX Charts</h1>
+<div class="content">
+  <div class="box-chart">
+    <h3 class="sub-title">Number Card Chart</h3>
+    <ngx-charts-number-card
+      [results]="chartOne.results"
+      cardColor="#cccccc">
+    </ngx-charts-number-card>
+  </div>
+  <div class="box-chart">
+    <h3 class="sub-title">Vertical Bar Chart</h3>
+    <ngx-charts-bar-vertical 
+      [results]="chartOne.results" 
+      [legend]="chartOne.showLegend"
+      xAxis=true,
+      yAxis=true,
+      [showXAxisLabel]="chartOne.showXAxisLabel"
+      [showYAxisLabel]="chartOne.showYAxisLabel"
+      [xAxisLabel]="chartOne.xAxisLabel"
+      [yAxisLabel]="chartOne.yAxisLabel">
+    </ngx-charts-bar-vertical>
+  </div>
+  <div class="box-chart">
+    <h3 class="sub-title">Horizontal Bar Chart</h3>
+    <ngx-charts-bar-horizontal 
+      [results]="chartOne.results" 
+      [legend]="chartOne.showLegend"
+      xAxis=true,
+      yAxis=true,
+      [showXAxisLabel]="chartOne.showXAxisLabel"
+      [showYAxisLabel]="chartOne.showYAxisLabel"
+      [xAxisLabel]="chartOne.yAxisLabel"
+      [yAxisLabel]="chartOne.xAxisLabel">
+    </ngx-charts-bar-horizontal>
+  </div>
+</div>

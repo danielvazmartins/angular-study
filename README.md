@@ -11,6 +11,15 @@ ng new my-app
 ng new my-app --style=scss (utilizar o sass)
 ng new my-app --skip-tests (não criar os arquivos de testes)
 ng new my-app --skip-git (no inicializa o git no repositorio, no caso de estar dentro de um repositorio)
+ng new my-app --style=scss --skip-test --skip-git
+
+- Limpar cache do npm caso apresente erro no npm install
+npm cache clean --force
+
+- Configurar o proxy caso tenha algum erro de conexão (o padrão é https, mas apresenta erro utilizando o modem 3G da Claro)
+npm config set proxy null
+npm config set https-proxy null
+npm config set registry http://registry.npmjs.org/
 
 - Executar o projeto
 cd my-app
@@ -49,6 +58,10 @@ https://material.angular.io/
 ### chart-ng2-charts
 Componente para criação de gráficos. Projeto utilizado para testar e estudar a instalação e funcionalidades do ng2-charts
 https://valor-software.com/ng2-charts/
+
+### chart-ngx-charts
+Componente para criação de gráficos. Projeto utilizado para testar e estudar a instalação e funcionalidades do ngx-charts
+https://github.com/swimlane/ngx-charts
 
 ## Projetos para verificar
 - ng-bootstrap <https://ng-bootstrap.github.io>

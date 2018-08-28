@@ -37,6 +37,7 @@ export class SignInComponent implements OnInit {
             this.router.navigate(['user', response.body['name']])
         }, error => {
             alert('Usuário ou senha inválidos!')
+            console.log(error)
             this.loginForm.reset()
             // O "&&" funciona igual um "if" se a primeira condição for verdadeira então executa a segunda
             this.platformDetectorService.isPlatformBrowser() &&
