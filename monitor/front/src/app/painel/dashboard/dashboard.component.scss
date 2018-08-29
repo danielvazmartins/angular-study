@@ -1,0 +1,23 @@
+:host {
+    background: #353535;
+    display: block;
+    height: 100%;
+    padding: 10px;
+
+    h1 {
+        color: #83a7ce;
+        text-align: center;
+        padding: 10px;
+        font-size: 26px;
+    }
+
+    .panel {
+        background: #fff;
+        padding: 10px;
+        box-shadow: 3px 3px 0px #5f5d5d;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}

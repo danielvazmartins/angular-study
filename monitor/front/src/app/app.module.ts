@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PainelComponent } from './painel/painel.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AngularMaterialModule } from './angular-material.module';
 import { FormsModule } from '@angular/forms';
+import { PainelModule } from './painel/painel.module';
+import { MAT_DATE_LOCALE } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PainelComponent,
     LoginComponent
   ],
   imports: [
@@ -22,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     AngularMaterialModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

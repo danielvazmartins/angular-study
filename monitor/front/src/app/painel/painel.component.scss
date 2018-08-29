@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            background: #fff;
+            border-bottom: 2px solid #ec0000;
+            padding: 15px 10px;
+            color: #ec0000;
+            font-weight: bold;
+            height: 70px;
+            
+            span {
+                font-size: 26px;
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .sub-content {
+            flex: 1;
+        }
+    }
+}

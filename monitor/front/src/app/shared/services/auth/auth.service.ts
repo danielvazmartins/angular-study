@@ -15,6 +15,14 @@ export class AuthService {
         })
     }
 
+    logout() {
+        return new Observable(observer => {
+            localStorage.removeItem('username')
+            observer.next({})
+            observer.complete()
+        })
+    }
+
     isLogged() {
         return !!localStorage.getItem('username')
     }

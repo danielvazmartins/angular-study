@@ -1,5 +1,9 @@
-<mat-card>
-    <mat-card-title>Login</mat-card-title>
+<mat-toolbar class="header">
+    <img class="logo" src="./assets/images/logo-santander.svg" alt="Logo Santander">
+    <span class="title">Monitor Angular</span>
+</mat-toolbar>
+<mat-card class="content">
+    <mat-card-title class="title">Login</mat-card-title>
     <mat-card-content>
         <form (ngSubmit)="login()">
             <mat-form-field>
@@ -8,7 +12,7 @@
             <mat-form-field>
                 <input type="text" matInput placeholder="Senha">
             </mat-form-field>
-            <button mat-raised-button color="primary">Primary</button>
+            <button class="bt-login" mat-raised-button color="warn">Login</button>
         </form>
     </mat-card-content>
 </mat-card>

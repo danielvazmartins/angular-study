@@ -1,0 +1,17 @@
+<h1>Dashboard</h1>
+<div class="panel">
+    <mat-form-field>
+        <input matInput [matDatepicker]="pickerStart" placeholder="Data de início">
+        <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
+        <mat-datepicker #pickerStart></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [matDatepicker]="pickerEnd" placeholder="Data de término">
+        <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+        <mat-datepicker #pickerEnd></mat-datepicker>
+    </mat-form-field>
+    <button mat-stroked-button color="warn">Atualizar</button>
+</div>
+<div class="panel">
+    <ngx-charts-advanced-pie-chart [results]="chartData.results" [label]="chartData.label" [view]="[590,250]"></ngx-charts-advanced-pie-chart>
+</div>
