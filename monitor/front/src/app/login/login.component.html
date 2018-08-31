@@ -5,14 +5,14 @@
 <mat-card class="content">
     <mat-card-title class="title">Login</mat-card-title>
     <mat-card-content>
-        <form (ngSubmit)="login()">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
             <mat-form-field>
-                <input type="text" matInput placeholder="E-mail">
+                <input type="text" matInput placeholder="E-mail" formControlName="userName">
             </mat-form-field>
             <mat-form-field>
-                <input type="text" matInput placeholder="Senha">
+                <input type="text" matInput placeholder="Senha" formControlName="password">
             </mat-form-field>
-            <button class="bt-login" mat-raised-button color="warn">Login</button>
+            <button [disabled]="loginForm.invalid" class="bt-login" mat-raised-button color="warn">Login</button>
         </form>
     </mat-card-content>
 </mat-card>

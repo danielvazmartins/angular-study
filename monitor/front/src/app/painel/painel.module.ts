@@ -8,6 +8,9 @@ import { AngularMaterialModule } from '../angular-material.module';
 import { C1Component } from './c1/c1.component';
 import { LogoSvgModule } from '../shared/components/logo-svg/logo-svg.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts'
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchService } from '../shared/services/search/search.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -21,9 +24,12 @@ import { NgxChartsModule } from '@swimlane/ngx-charts'
         PainelRoutingModule,
         AngularMaterialModule,
         LogoSvgModule,
-        NgxChartsModule
+        NgxChartsModule,
+        ReactiveFormsModule,
+        HttpClientModule
     ],
-    exports: [
+    providers: [
+        SearchService
     ]
 })
 export class PainelModule {}

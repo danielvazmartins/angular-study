@@ -6,8 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AngularMaterialModule } from './angular-material.module';
-import { FormsModule } from '@angular/forms';
-import { PainelModule } from './painel/painel.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MAT_DATE_LOCALE } from '@angular/material';
 
 @NgModule({
@@ -20,7 +19,7 @@ import { MAT_DATE_LOCALE } from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }  
