@@ -1,0 +1,30 @@
+<div class="panel" *ngIf="tableData.results.length > 0">
+    <table mat-table [dataSource]="tableData.results" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="dateTime">
+            <th mat-header-cell *matHeaderCellDef> Data-Hora </th>
+            <td mat-cell *matCellDef="let element"> {{element.dateTime | date:'dd/MM/yyyy HH:mm'}} </td>
+        </ng-container>
+        
+        <!-- Name Column -->
+        <ng-container matColumnDef="success">
+            <th mat-header-cell *matHeaderCellDef> Sucesso </th>
+            <td mat-cell *matCellDef="let element"> {{element.success}} </td>
+        </ng-container>
+        
+        <!-- Weight Column -->
+        <ng-container matColumnDef="error_with_impact">
+            <th mat-header-cell *matHeaderCellDef> Erros com impacto </th>
+            <td mat-cell *matCellDef="let element"> {{element.error_with_impact || 0}} </td>
+        </ng-container>
+        
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="error_without_impact">
+            <th mat-header-cell *matHeaderCellDef> Erros sem impacto </th>
+            <td mat-cell *matCellDef="let element"> {{element.error_without_impact || 0}} </td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="tableData.displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: tableData.displayedColumns;"></tr>
+    </table>
+</div>

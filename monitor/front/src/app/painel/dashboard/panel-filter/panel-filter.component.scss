@@ -1,0 +1,14 @@
+:host {
+    .panel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+
+        .group-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

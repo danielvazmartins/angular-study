@@ -6,9 +6,9 @@ import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
 import { MatDatepickerModule } from '@angular/material/datepicker'
-import { MatMomentDateModule } from '@angular/material-moment-adapter/'
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table'
+import { MatNativeDateModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -19,7 +19,7 @@ import { MatTableModule } from '@angular/material/table'
         MatButtonModule,
         MatIconModule,
         MatDatepickerModule,
-        MatMomentDateModule,
+        MatNativeDateModule,
         MatSelectModule,
         MatTableModule
     ],
@@ -31,7 +31,7 @@ import { MatTableModule } from '@angular/material/table'
         MatButtonModule,
         MatIconModule,
         MatDatepickerModule,
-        MatMomentDateModule,
+        MatNativeDateModule,
         MatSelectModule,
         MatTableModule
     ]

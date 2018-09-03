@@ -1,69 +1,9 @@
-<form [formGroup]="filterForm" class="panel">
-    <mat-form-field>
-        <input matInput 
-            [matDatepicker]="pickerStart" 
-            placeholder="Data de início"
-            formControlName="dateStart">
-        <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
-        <mat-datepicker #pickerStart></mat-datepicker>
-    </mat-form-field>
-    <mat-form-field>
-        <mat-select placeholder="Hora inicial" formControlName="timeStart">
-            <mat-option *ngFor="let period of periods; let index = index" [value]="index">
-                {{period}}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput 
-            [matDatepicker]="pickerEnd" 
-            placeholder="Data de término"
-            formControlName="dateEnd">
-        <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
-        <mat-datepicker #pickerEnd></mat-datepicker>
-    </mat-form-field>
-    <mat-form-field>
-        <mat-select placeholder="Hora final" formControlName="timeEnd">
-            <mat-option *ngFor="let period of periods; let index = index" [value]="index">
-                {{period}}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-    <button mat-icon-button (click)="updateSearch()">
-        <mat-icon color="warn">loop</mat-icon>
-    </button>
-</form>
-<div class="panel" *ngIf="chartData.results.length > 0">
-    <ngx-charts-advanced-pie-chart [results]="chartData.results" [label]="chartData.label" [view]="[650,250]"></ngx-charts-advanced-pie-chart>
-</div>
-
-<div class="panel" *ngIf="tableData.results.length > 0">
-    <table mat-table [dataSource]="tableData.results" class="mat-elevation-z8">
-        <!-- Position Column -->
-        <ng-container matColumnDef="dateTime">
-            <th mat-header-cell *matHeaderCellDef> Data-Hora </th>
-            <td mat-cell *matCellDef="let element"> {{element.dateTime}} </td>
-        </ng-container>
-        
-        <!-- Name Column -->
-        <ng-container matColumnDef="success">
-            <th mat-header-cell *matHeaderCellDef> Sucesso </th>
-            <td mat-cell *matCellDef="let element"> {{element.success}} </td>
-        </ng-container>
-        
-        <!-- Weight Column -->
-        <ng-container matColumnDef="error_with_impact">
-            <th mat-header-cell *matHeaderCellDef> Erros com impacto </th>
-            <td mat-cell *matCellDef="let element"> {{element.error_with_impact}} </td>
-        </ng-container>
-        
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="error_without_impact">
-            <th mat-header-cell *matHeaderCellDef> Erros sem impacto </th>
-            <td mat-cell *matCellDef="let element"> {{element.error_without_impact}} </td>
-        </ng-container>
-        
-        <tr mat-header-row *matHeaderRowDef="tableData.displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: tableData.displayedColumns;"></tr>
-    </table>
-</div>
+<app-panel-filter
+    [filterValues]="panelFilter"
+    (changeFilter)="updateSearch($event)">
+</app-panel-filter>
+<app-graph-total-requests
+    [chartData]="chartData">
+</app-graph-total-requests>
+<app-table-requests
+    [tableData]="tableData"></app-table-requests>

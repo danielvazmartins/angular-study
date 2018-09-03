@@ -1,67 +1,58 @@
 import { Component, OnInit } from '@angular/core';
-import { periodsMock } from '../../shared/mocks/periods.mock';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { SearchService } from '../../shared/services/search/search.service';
+import { FilterValues } from './filter.class';
 
 @Component({
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-    
-    public filterForm: FormGroup
-    public chartData = {
-        results: [],
-        label: ''
-    }
-    public tableData = { 
-        results: [],
-        displayedColumns: ['dateTime', 'success', 'error_with_impact', 'error_without_impact']
-    }
-    public periods: string[] = periodsMock
+    public panelFilter: FilterValues
+    public chartData
+    public tableData
 
     constructor(
-        private formBuilder: FormBuilder,
         private searchService: SearchService
     ) {}
 
     ngOnInit(): void {
-        // Formulario do filtro
-        this.filterForm = this.formBuilder.group({
-            dateStart: ['', Validators.required],
-            timeStart: ['', Validators.required],
-            dateEnd: ['', Validators.required],
-            timeEnd: ['', Validators.required]
-        })
+        this.panelFilter = {
+            dateStart: new Date('08/29/2018'),
+            timeStart: 32,
+            dateEnd: new Date('08/29/2018'),
+            timeEnd: 48
+        }
+        this.chartData = {
+            results: [],
+            label: 'Total de requisições'
+        }
+        this.tableData = { 
+            results: [],
+            displayedColumns: ['dateTime', 'success', 'error_with_impact', 'error_without_impact']
+        }
 
-        //this.updateSearch()
+        this.updateSearch(this.panelFilter)
     }
 
-    updateSearch() {
+    addMinutes(date, minutes) {
+        return new Date(date.getTime() + minutes*60000);
+    }
+
+    updateSearch($event: FilterValues) {
         // Periodo da busca
-        let startDateTime = this.addMinutes(
-            this.filterForm.get('dateStart').value._d,
-            this.filterForm.get('timeStart').value * 15)
-        let endDateTime = this.addMinutes(
-            this.filterForm.get('dateEnd').value._d,
-            this.filterForm.get('timeEnd').value * 15)
+        let startDateTime = this.addMinutes($event.dateStart, $event.timeStart * 15)
+        let endDateTime = this.addMinutes($event.dateEnd, $event.timeEnd * 15)
 
         // Requisições totais
         this.searchService.searchTotalRequestsByPeriod(startDateTime, endDateTime)
         .subscribe(response => {
             this.chartData.results = response['requests']
-            this.chartData.label = "Total de requisições"
         })
 
         // Requisições por hora
         this.searchService.searchTotalRequestsByHour(startDateTime, endDateTime)
         .subscribe(response => {
             this.tableData.results = response['requests']
-            console.log(response)
         })
-    }
-
-    addMinutes(date, minutes) {
-        return new Date(date.getTime() + minutes*60000);
     }
 }

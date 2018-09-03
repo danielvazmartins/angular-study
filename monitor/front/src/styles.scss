@@ -15,6 +15,17 @@ html, body {
 
 form {
     mat-form-field {
-        width: 100%;
+        margin: 0 5px;
     }
+}
+
+table {
+    width: 100%;
+}
+
+.panel {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 3px 3px 0px #5f5d5d;
+    margin-bottom: 10px;
 }

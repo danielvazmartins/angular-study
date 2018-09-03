@@ -2,4 +2,11 @@
   <mat-icon>home</mat-icon>
   <span>{{title}}</span>
 </mat-toolbar>
-
+<mat-card>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" [formControl]="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="pegarData()">Pegar data</button>
+</mat-card>
