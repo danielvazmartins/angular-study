@@ -3,9 +3,11 @@
         background: #fff;
         border-bottom: 2px solid #ec0000;
         height: 68px;
+        position: relative;
 
         .logo {
             width: 180px;
+            position: absolute;
         }
 
         .title {
@@ -20,13 +22,22 @@
     .content {
         max-width: 320px;
         display: block;
-        margin: 30px auto 0;
+        margin: 100px auto 0;
 
         .title {
             color: #ec0000;
             font-weight: bold;
             text-transform: uppercase;
             text-align: center;
+        }
+
+        mat-form-field {
+            width: 100%;
+            margin-bottom: 5px;
+
+            .mat-error {
+                font-size: 12px;
+            }
         }
         
         .bt-login {

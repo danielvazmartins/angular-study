@@ -27,6 +27,8 @@
 
         .sub-content {
             flex: 1;
+            overflow-y: scroll;
+            background: #353535;
         }
     }
 }

@@ -1,7 +1,11 @@
 <app-panel-filter
     [filterValues]="panelFilter"
+    [lastUpdate]="lastUpdate"
     (changeFilter)="updateSearch($event)">
 </app-panel-filter>
+<app-card-total-requests
+    [chartData]="chartData">
+</app-card-total-requests>
 <app-graph-total-requests
     [chartData]="chartData">
 </app-graph-total-requests>

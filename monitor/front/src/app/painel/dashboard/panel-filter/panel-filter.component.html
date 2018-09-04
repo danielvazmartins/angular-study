@@ -1,5 +1,5 @@
-<form [formGroup]="filterForm" class="panel">
-    <div class="group-flex">
+<div class="panel">
+    <form [formGroup]="filterForm" class="filters">
         <div>
             <mat-form-field>
                 <input matInput 
@@ -34,8 +34,28 @@
                 </mat-select>
             </mat-form-field>
         </div>
+    </form>
+    <div class="controls">
+        <div class="reload">
+            <mat-form-field class="select-interval">
+                <mat-select [value]="reloadIntervalValue" (selectionChange)="changeReloadInterval($event.value)">
+                    <mat-option *ngFor="let interval of reloadIntervals" [value]="interval.value">
+                        {{interval.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-icon-button *ngIf="autoReload._subscriptions" (click)="stopAutoReload()">
+                <mat-icon class="pause">pause</mat-icon>
+            </button>
+            <button mat-icon-button *ngIf="!autoReload._subscriptions" (click)="startAutoReload()">
+                <mat-icon class="play">play_arrow</mat-icon>
+            </button>
+            <button mat-icon-button (click)="updateSearch()">
+                <mat-icon color="primary">loop</mat-icon>
+            </button>
+        </div>
+        <div class="last-update">
+            <span>{{lastUpdate | date:'dd/MM/yyyy HH:mm:ss'}}</span>
+        </div>
     </div>
-    <button mat-icon-button (click)="updateSearch()">
-        <mat-icon color="warn">loop</mat-icon>
-    </button>
-</form>
+</div>

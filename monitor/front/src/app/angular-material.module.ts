@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table'
-import { MatNativeDateModule } from '@angular/material';
+import { MatNativeDateModule, MatDividerModule } from '@angular/material';
 
 @NgModule({
     imports: [

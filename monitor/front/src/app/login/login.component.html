@@ -7,10 +7,16 @@
     <mat-card-content>
         <form [formGroup]="loginForm" (ngSubmit)="login()">
             <mat-form-field>
-                <input type="text" matInput placeholder="E-mail" formControlName="userName">
+                <input type="text" matInput placeholder="Usuário" formControlName="userName">
+                <mat-error *ngIf="loginForm.get('userName').hasError('required')">
+                    Favor preencher o nome de usuário
+                </mat-error>
             </mat-form-field>
             <mat-form-field>
                 <input type="text" matInput placeholder="Senha" formControlName="password">
+                <mat-error *ngIf="loginForm.get('userName').hasError('required')">
+                    Favor preencher a senha
+                </mat-error>
             </mat-form-field>
             <button [disabled]="loginForm.invalid" class="bt-login" mat-raised-button color="warn">Login</button>
         </form>

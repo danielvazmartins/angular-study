@@ -3,12 +3,50 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 0;
 
-        .group-flex {
+        .filters {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            padding-top: 10px;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 0px 3px grey;
+            border-radius: 4px;
+            padding: 0 20px;
+            margin-left: 5px;
+
+            .reload {
+                display: flex;
+                align-items: center;
+
+                .pause {
+                    color: #f00;
+                }
+
+                .play {
+                    color: #0f0;
+                }
+            }
+
+            .last-update {
+                margin-bottom: 5px;
+                margin-top: -10px;
+
+                span {
+                    color: #333;
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .select-interval {
+            width: 50px;
+            text-align: center;
         }
     }
 }
