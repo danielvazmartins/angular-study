@@ -53,7 +53,6 @@ export class DashboardComponent implements OnInit {
             this.searchService.searchTotalRequestsByPeriod(startDateTime, endDateTime)
             .pipe(map(response => {
                 this.chartData.results = response['requests']
-                console.log(this.chartData.results)
             }))
         )
 

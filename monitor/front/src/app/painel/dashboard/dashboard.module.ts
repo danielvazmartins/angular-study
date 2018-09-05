@@ -7,6 +7,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { GraphTotalRequests } from './graph-total-requests/graph-total-requests.component';
 import { TableRequestsComponent } from './table-requests/table-requests.component';
 import { CardTotalRequestsComponent } from './card-total-requests/card-total-requests.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [

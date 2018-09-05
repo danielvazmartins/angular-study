@@ -39,13 +39,13 @@ export class SearchService {
                 data.aggregations.by_status.by_status.buckets.map(bucket => {
                     switch (bucket.key) {
                         case 1: 
-                            requests.push({name: '% Sucesso', value: bucket.doc_count})
+                            requests.push({name: 'Sucesso', value: bucket.doc_count})
                             break;
                         case 2:
-                            requests.push({name: '% Erros com impacto', value: bucket.doc_count})
+                            requests.push({name: 'Erros com impacto', value: bucket.doc_count})
                             break;
                         case 3:
-                            requests.push({name: '% Erros sem impacto', value: bucket.doc_count})
+                            requests.push({name: 'Erros sem impacto', value: bucket.doc_count})
                             break;
                     }
                 })

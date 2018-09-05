@@ -10,8 +10,9 @@ export class RequestInterceptor implements HttpInterceptor {
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         // Se estiver logado então intercepta as conexões para adicionar o token no cabeçalho
-        if ( this.tokenService.hasToken ) {
+        if ( this.tokenService.hasToken() ) {
             const token = this.tokenService.getToken()
+            
             req = req.clone({
                 setHeaders: {
                     'x-access-token': token
@@ -20,5 +21,4 @@ export class RequestInterceptor implements HttpInterceptor {
         }
         return next.handle(req)
     }
-
 }
