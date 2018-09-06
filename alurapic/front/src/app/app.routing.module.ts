@@ -4,6 +4,8 @@ import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { PhotoListResolve } from './photos/photo-list/photo-list.resolve';
+import { AuthGuard } from './core/auth/auth.guard';
+import { PhotoDetailComponent } from './photos/photo-detail/photo-detail.component';
 
 const routes:Routes = [
     { 
@@ -19,9 +21,17 @@ const routes:Routes = [
         resolve: {
             photos: PhotoListResolve
         } 
-    },
-    { path: 'p/add', component: PhotoFormComponent },
-    { path: '**', component: NotFoundComponent }
+    },{ 
+        path: 'p/add', 
+        component: PhotoFormComponent,
+        canActivate: [AuthGuard]
+    },{
+        path: 'p/:photoId',
+        component: PhotoDetailComponent
+    },{ 
+        path: '**', 
+        component: NotFoundComponent 
+    }
 ] 
 
 @NgModule({

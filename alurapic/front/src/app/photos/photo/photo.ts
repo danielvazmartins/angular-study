@@ -4,4 +4,5 @@ export class Photo {
     description: string
     likes: number
     comments: number
+    userId: number
 }

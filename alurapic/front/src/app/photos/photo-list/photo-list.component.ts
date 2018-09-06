@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./photo-list.component.css']
 })
 export class PhotoListComponent implements OnInit {
-  public photos: Photo[]
+  public photos: Photo[] = []
   public userName: string 
   public hasMore: boolean = true
   public currentPage: number = 1
@@ -20,8 +20,10 @@ export class PhotoListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userName = this.route.snapshot.params.userName
-    this.photos = this.route.snapshot.data.photos
+    this.route.params.subscribe(params => {
+      this.userName = params.userName
+      this.photos = this.route.snapshot.data.photos
+    })
   }
 
   load() {

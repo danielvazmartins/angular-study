@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ErrorMessageModule } from '../../shared/components/errormessage/errormessage.module';
 import { PhotoModule } from '../photo/photo.module';
+import { ImediateClickModule } from '../../shared/directives/imediate-click/imediate-click.module';
 
 @NgModule({
     declarations: [
@@ -13,7 +14,8 @@ import { PhotoModule } from '../photo/photo.module';
         CommonModule,
         ReactiveFormsModule,
         ErrorMessageModule,
-        PhotoModule
+        PhotoModule,
+        ImediateClickModule
     ]
 })
 export class PhotoFormModule {
