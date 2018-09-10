@@ -7,6 +7,7 @@ import { PhotoCommentsComponent } from './photo-comments/photo-comments.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { ErrorMessageModule } from '../../shared/components/errormessage/errormessage.module';
 import { PhotoOwnerOnlyDirective } from './photo-owner-only/photo-owner-only.directive';
+import { ShowIfLoggedModule } from '../../shared/directives/show-if-logged/show-if-logged.module';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { PhotoOwnerOnlyDirective } from './photo-owner-only/photo-owner-only.dir
         RouterModule,
         PhotoModule,
         ReactiveFormsModule,
-        ErrorMessageModule
+        ErrorMessageModule,
+        ShowIfLoggedModule
     ],
     exports: [
         PhotoDetailComponent
