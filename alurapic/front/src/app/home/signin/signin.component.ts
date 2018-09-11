@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../core/auth/auth.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PlatformDetectorService } from '../../core/platform-detector/platform-detector.service';
+import { LoadingService } from '../../shared/components/loading/loading.service';
 
 @Component({
     selector: 'app-vmessage',
@@ -17,7 +18,8 @@ export class SignInComponent implements OnInit {
         private formBuilder:FormBuilder, 
         private authService:AuthService,
         private router:Router,
-        private platformDetectorService:PlatformDetectorService ) {}
+        private platformDetectorService:PlatformDetectorService,
+    ) {}
     
     ngOnInit(): void {
         this.loginForm = this.formBuilder.group({

@@ -30,7 +30,13 @@ export class PhotoService {
         formData.append('allowComments', allowComments ? 'true' : 'false')
         formData.append('imageFile', file, 'file.jpg');
         return this.http.post(
-            API + 'photos/upload', formData
+            API + 'photos/upload', 
+            formData,
+            {
+                // Habilita o monitoramento dos eventos para ver o progresso da requisição
+                observe: 'events',
+                reportProgress: true
+            }
         );
     }    
 

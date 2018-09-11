@@ -5,6 +5,8 @@ import { UserService } from '../../../core/user/user.service';
     selector: '[show-if-logged]'
 })
 export class ShowIfLoggedDirective implements OnInit {
+    currentDisplay: string
+
     constructor(
         private element: ElementRef<any>,
         private renderer: Renderer,
@@ -12,8 +14,17 @@ export class ShowIfLoggedDirective implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        if ( !this.userService.isLogged() ) {
-            this.renderer.setElementStyle(this.element.nativeElement, 'display', 'none')
-        }
+        this.currentDisplay = getComputedStyle(this.element.nativeElement).display
+
+        // Esta ouvindo o observable porque o header não é recarregado quando muda de tela e faz o login e o logout
+        this.userService.getUser()
+        .subscribe(user => {
+            if ( user ) {
+                this.renderer.setElementStyle(this.element.nativeElement, 'display', this.currentDisplay)
+            } else {
+                this.currentDisplay = getComputedStyle(this.element.nativeElement).display
+                this.renderer.setElementStyle(this.element.nativeElement, 'display', 'none')
+            }
+        })
     }
 }

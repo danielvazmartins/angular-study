@@ -14,9 +14,15 @@ const routes:Routes = [
             { 
                 path: '',
                 component: SignInComponent,
+                data: {
+                    title: 'Login'
+                }
             },{
                 path: 'signup',
-                component: SignUpComponent
+                component: SignUpComponent,
+                data: {
+                    title: 'Cadastro'
+                }
             }
         ]
     }

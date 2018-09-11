@@ -1,6 +1,14 @@
 <header class="fixed-top">
     <nav class="navbar navbar-light bg-white">
-        <a class="navbar-brand">ALURAPIC</a>
+        <a class="navbar-brand">
+            <i tabindex="0" class="fa fa-bars mr-2" (click)="menu.toggle()" (keyup.space)="menu.toggle()"></i>
+            ALURAPIC
+        </a>
+        <app-menu #menu>
+            <ul class="list-unstyled">
+                <li><a show-if-logged [routerLink]="['p','add']">Upload</a></li>
+            </ul>
+        </app-menu>
         <div *ngIf="user$ |async as user; else login">
             <i class="fa fa-user-circle mr-2"></i>
             <a>{{user.name}}</a>
@@ -13,6 +21,7 @@
         </ng-template>
     </nav>
     <div class="fixed-top">
+        <app-loading></app-loading>
         <app-alert></app-alert>
     </div>
 </header>
