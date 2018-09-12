@@ -6,6 +6,7 @@ import { NewUser } from './new-user';
 import { SignUpService } from './signup.service';
 import { Router } from '@angular/router';
 import { PlatformDetectorService } from '../../core/platform-detector/platform-detector.service';
+import { UserNameEqualPassword } from './username-equal-password.validator';
 
 @Component({
     templateUrl: './signup.component.html',
@@ -48,17 +49,21 @@ export class SignUpComponent implements OnInit {
                 Validators.minLength(8),
                 Validators.maxLength(14)
             ]]
+        }, {
+            validator: UserNameEqualPassword
         })
         this.platformDetectorService.isPlatformBrowser() &&
             this.emailInput.nativeElement.focus()
     }
 
     signup() {
-        const newUser = this.signUpForm.getRawValue() as NewUser
-        this.signUpService.signup(newUser)
-        .subscribe(
-            () => this.router.navigate(['']),
-            error => console.log(error)
-        )
+        if ( this.signUpForm.valid && !this.signUpForm.pending ) {
+            const newUser = this.signUpForm.getRawValue() as NewUser
+            this.signUpService.signup(newUser)
+            .subscribe(
+                () => this.router.navigate(['']),
+                error => console.log(error)
+            )
+        }
     }
 }

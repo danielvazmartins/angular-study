@@ -1,5 +1,5 @@
 <h4 class="text-center">Register to embrace a new world!</h4>
-<form class="form mt-4" [formGroup]="signUpForm" (ngSubmit)="signup()">
+<form #form="ngForm" class="form mt-4" [formGroup]="signUpForm" (ngSubmit)="signup()">
     <div class="form-group">
         <input
             #emailInput
@@ -7,8 +7,8 @@
             placeholder="email" 
             autofocus
             formControlName="email">
-        <app-errormessage *ngIf="signUpForm.get('email').errors?.required" text="Email is required!"></app-errormessage>
-        <app-errormessage *ngIf="signUpForm.get('email').errors?.email" text="Invalid e-mail!"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('email').errors?.required && ( form.submitted || signUpForm.get('email').touched )" text="Email is required!"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('email').errors?.email && ( form.submitted || signUpForm.get('email').touched )" text="Invalid e-mail!"></app-errormessage>
     </div>
 
     <div class="form-group">
@@ -17,10 +17,10 @@
             placeholder="user name" 
             autofocus
             formControlName="userName">
-        <app-errormessage *ngIf="signUpForm.get('userName').errors?.required" text="User Name is required!"></app-errormessage>
-        <app-errormessage *ngIf="signUpForm.get('userName').errors?.minlength" text="Mininum length is 2"></app-errormessage>
-        <app-errormessage *ngIf="signUpForm.get('userName').errors?.maxlength" text="Maximum length is 30"></app-errormessage>
-        <app-errormessage *ngIf="signUpForm.get('userName').errors?.lowerCase" text="Invalid pattern"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('userName').errors?.required && ( form.submitted || signUpForm.get('userName').touched )" text="User Name is required!"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('userName').errors?.minlength && ( form.submitted || signUpForm.get('userName').touched )" text="Mininum length is 2"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('userName').errors?.maxlength && ( form.submitted || signUpForm.get('userName').touched )" text="Maximum length is 30"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('userName').errors?.lowerCase && ( form.submitted || signUpForm.get('userName').touched )" text="Invalid pattern"></app-errormessage>
         <app-errormessage *ngIf="signUpForm.get('userName').errors?.userNameTaken" text="Username already taken"></app-errormessage>
 
     </div>
@@ -31,9 +31,9 @@
             placeholder="full name" 
             autofocus
             formControlName="fullName">
-        <app-errormessage *ngIf="signUpForm.get('fullName').errors?.required" text="Full Name is required!"></app-errormessage>
-        <app-errormessage *ngIf="signUpForm.get('fullName').errors?.minlength" text="Mininum length is 2"></app-errormessage>
-        <app-errormessage *ngIf="signUpForm.get('fullName').errors?.maxlength" text="Maximum length is 40"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('fullName').errors?.required && ( form.submitted || signUpForm.get('fullName').touched )" text="Full Name is required!"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('fullName').errors?.minlength && ( form.submitted || signUpForm.get('fullName').touched )" text="Mininum length is 2"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('fullName').errors?.maxlength && ( form.submitted || signUpForm.get('fullName').touched )" text="Maximum length is 40"></app-errormessage>
     </div>
 
     <div class="form-group">
@@ -43,15 +43,15 @@
             placeholder="password" 
             autofocus
             formControlName="password">
-        <app-errormessage *ngIf="signUpForm.get('password').errors?.required" text="Password is required!"></app-errormessage>
-        <app-errormessage *ngIf="signUpForm.get('password').errors?.minlength" text="Mininum length is 8"></app-errormessage>
-        <app-errormessage *ngIf="signUpForm.get('password').errors?.maxlength" text="Maximum length is 14"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('password').errors?.required && ( form.submitted || signUpForm.get('password').touched )" text="Password is required!"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('password').errors?.minlength && ( form.submitted || signUpForm.get('password').touched )" text="Mininum length is 8"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.get('password').errors?.maxlength && ( form.submitted || signUpForm.get('password').touched )" text="Maximum length is 14"></app-errormessage>
+        <app-errormessage *ngIf="signUpForm.errors?.userNameEqualPassword && form.submitted" text="Password can not be equal userName"></app-errormessage>
     </div>
 
     <button 
         type="submit" 
-        class="btn btn-primary btn-block"
-        [disabled]="signUpForm.invalid || signUpForm.pending">
+        class="btn btn-primary btn-block">
         Register
     </button>
 

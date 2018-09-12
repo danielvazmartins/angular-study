@@ -35,7 +35,8 @@ export class PhotoDetailComponent implements OnInit {
         this.photoService.removePhoto(this.photoId)
         .subscribe( () => {
             this.alertService.success('Photo removed!', true)
-            this.router.navigate(['/user', this.userService.getUserName()])
+            // O 'replaceUrl: true', remove essa rota da historyApi
+            this.router.navigate(['/user', this.userService.getUserName()], { replaceUrl: true })
         }, error => {
             console.log(error)
             this.alertService.warning('Error to remove photo')

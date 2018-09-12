@@ -12,16 +12,23 @@ import { LoadingService } from '../../shared/components/loading/loading.service'
 export class SignInComponent implements OnInit {
 
     @ViewChild('userNameInput') userNameInput:ElementRef<HTMLInputElement>
-    public loginForm:FormGroup;
+    public loginForm: FormGroup
+    public fromUrl: string
     
     constructor(
         private formBuilder:FormBuilder, 
         private authService:AuthService,
         private router:Router,
         private platformDetectorService:PlatformDetectorService,
+        private activatedRoute: ActivatedRoute
     ) {}
     
     ngOnInit(): void {
+        this.activatedRoute.queryParams
+        .subscribe(params => {
+            this.fromUrl = params.fromUrl
+        })
+
         this.loginForm = this.formBuilder.group({
             userName: ['', Validators.required],
             password: ['', Validators.required]
@@ -36,7 +43,12 @@ export class SignInComponent implements OnInit {
             this.loginForm.get('userName').value,
             this.loginForm.get('password').value
         ).subscribe(response => {
-            this.router.navigate(['user', response.body['name']])
+            this.activatedRoute.queryParams
+            .subscribe(params => {
+                this.fromUrl
+                    ? this.router.navigate([this.fromUrl])
+                    : this.router.navigate(['user', response.body['name']])
+            })
         }, error => {
             //alert('Usuário ou senha inválidos!')
             //console.log('error',error)
