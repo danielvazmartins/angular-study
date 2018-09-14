@@ -11,6 +11,7 @@ ng new my-app
 ng new my-app --style=scss (utilizar o sass)
 ng new my-app --skip-tests (não criar os arquivos de testes)
 ng new my-app --skip-git (no inicializa o git no repositorio, no caso de estar dentro de um repositorio)
+ng new my-app --skip-install (cria o projeto sem instalar as dependências)
 ng new my-app --style=scss --skip-test --skip-git
 
 - Limpar cache do npm caso apresente erro no npm install
@@ -62,6 +63,10 @@ https://valor-software.com/ng2-charts/
 ### chart-ngx-charts
 Componente para criação de gráficos. Projeto utilizado para testar e estudar a instalação e funcionalidades do ngx-charts
 https://github.com/swimlane/ngx-charts
+
+### drag-and-drop-ngx
+Componente para utilizar o recurso de Drag and Drop (clicar e arrastar)
+https://www.npmjs.com/package/ngx-drag-drop
 
 ## Projetos para verificar
 - ng-bootstrap <https://ng-bootstrap.github.io>

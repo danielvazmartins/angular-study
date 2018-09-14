@@ -1,0 +1,27 @@
+:host {
+    border: 3px solid #3c3c3c;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 0px #ccc;
+
+    .dragBox {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        padding: 10px;
+        cursor: -webkit-grab;
+
+        i {
+            font-size: 32px;
+            display: block;
+            padding: 10px;
+            color: blue;
+        }
+
+        span {
+            font-size: 14px;
+            color: #100754;
+        }
+    }
+}

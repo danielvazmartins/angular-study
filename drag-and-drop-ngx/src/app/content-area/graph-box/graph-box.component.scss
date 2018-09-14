@@ -1,0 +1,30 @@
+:host {
+    width: 200px;
+    height: 150px;
+    display: block;
+    margin: 5px;
+    position: relative;
+    text-align: center;
+    border: 1px solid #3c3c3c;
+    box-shadow: 3px 3px 3px #3c3c3c;
+    padding: 10px;
+
+    .bt-close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: red;
+        cursor: pointer;
+    }
+
+    .graph {
+        font-size: 48px;
+        display: block;
+        padding: 20px;
+        color: blue;
+    }
+
+    span {
+        color: #100754;
+    }
+}

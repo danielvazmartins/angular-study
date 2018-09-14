@@ -1,0 +1,2 @@
+<app-graph-box *ngFor="let graph of graphs" [graph]="graph" (removeGraph)="removeGraph($event)"></app-graph-box>
+<app-drop-box (newGraph)="addGraph($event)"></app-drop-box>
