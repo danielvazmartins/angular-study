@@ -1,2 +1,8 @@
-<app-graph-box *ngFor="let graph of graphs" [graph]="graph" (removeGraph)="removeGraph($event)"></app-graph-box>
+<div class="drop-group" *ngFor="let graph of graphs; let index = index">
+    <app-drop-box inter="true" (newGraph)="addGraph($event, index)"></app-drop-box>
+    <app-graph-box 
+        [graph]="graph" 
+        (removeGraph)="removeGraph($event)">
+    </app-graph-box>
+</div>
 <app-drop-box (newGraph)="addGraph($event)"></app-drop-box>

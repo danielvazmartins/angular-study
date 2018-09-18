@@ -30,6 +30,7 @@ export class StockService {
 
   remove(stock) {
     stocks.splice(stocks.indexOf(stock), 1)
+    return this.get()
   }
 
   load(symbols) {

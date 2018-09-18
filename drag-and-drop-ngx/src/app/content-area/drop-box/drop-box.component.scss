@@ -1,19 +1,36 @@
 :host {
     display: block;
     margin: 5px;
-    padding: 23px;
 
     .dropBox {
-        width: 180px;
-        height: 130px;
+        width: 200px;
+        height: 150px;
         background: #eee;
         border: 1px dashed #3c3c3c;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 10px;
+        margin-left: 20px;
 
         &.dragIsOver {
             background: yellowgreen;
+        }
+
+        &.inter {
+            background: #fff;
+            border: none;
+            width: 10px;
+            margin-left: 0;
+            padding-left: 0;
+            padding-right: 0;
+            transition: width 0.3s ease-in-out;
+
+            &.dragIsOver {
+                background: #eee;
+                border: 1px dashed #3c3c3c;
+                width: 200px;
+            }
         }
     }
 }

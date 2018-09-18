@@ -1,7 +1,9 @@
-<div class="dropBox"
-  dndDropzone 
-  (dndDragover)="onDragOver($event)" 
-  (dndDrop)="onDrop($event)"
-  [ngClass]="{dragIsOver: dragIsOver}">
-  ARRASTE AQUI
+<div 
+    #dropBox 
+    class="dropBox"
+    dndDropzone 
+    (dndDragover)="onDragOver($event)" 
+    (dndDrop)="onDrop($event)"
+    [ngClass]="{dragIsOver: dragIsOver}">
+    <ng-container *ngIf="!inter">ARRASTE AQUI</ng-container>
 </div>

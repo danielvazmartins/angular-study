@@ -9,8 +9,8 @@ import { Graph } from '../shared/classes/graph';
 export class ContentAreaComponent {
     graphs: Graph[] = []
 
-    addGraph(graph: Graph) {
-        this.graphs.push(graph)
+    addGraph(graph: Graph, pos: number) {
+        ( pos != undefined ) ? this.graphs.splice(pos, 0, graph) : this.graphs.push(graph)
     }
 
     removeGraph(graph: Graph) {

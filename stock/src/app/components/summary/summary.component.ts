@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-summary',
@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SummaryComponent {
 
-  @Input() stock: any;
+  @Input() stock: any
 
   isNegative() {
     return (this.stock && this.stock.change < 0);
