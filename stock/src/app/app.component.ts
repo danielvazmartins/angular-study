@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { StockService, StockInterface } from './services/stock.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
