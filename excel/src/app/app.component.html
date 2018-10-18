@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">Exportar dados para o Excel</h1>
+    </div>
+    <button type="button" class="btn btn-primary mr-2" (click)="exportToExcel()">Exportar</button>
+    <button type="button" class="btn btn-primary mr-2" (click)="exportToExcelWithBlob()">Exportar com Blob</button>
+    <button type="button" class="btn btn-primary mr-2" (click)="exportToExcelWithXLSX()">Exportar com XLSX</button>
+    <button type="button" class="btn btn-primary mr-2" (click)="exportToExcelWithXLSX2()">Exportar com XLSX2</button>
+    <button type="button" class="btn btn-primary" (click)="exportToExcelWithStyleXLSX()">Exportar com Style XLSX</button>
+    <table class="table" #elTable>
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Requisições</th>
+                <th>Usuários</th>
+                <th>Erros</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let line of tableData">
+                <td>{{line.data |date:'HH:mm'}}</td>
+                <td>{{line.requisicoes}}</td>
+                <td>{{line.usuarios}}</td>
+                <td>{{line.erros}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

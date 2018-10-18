@@ -4,8 +4,7 @@
 ng new material --style=scss --skip-tests
 
 ## Instalação do Angular Material
-npm install --save @angular/material @angular/cdk
-npm install --save @angular/animations
+npm install --save @angular/material @angular/cdk @angular/animations
 
 - No app.module.ts
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

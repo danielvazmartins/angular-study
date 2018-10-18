@@ -7,8 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AngularMaterialModule } from './angular-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MAT_DATE_LOCALE } from '@angular/material';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,9 +19,7 @@ import { MAT_DATE_LOCALE } from '@angular/material';
     AngularMaterialModule,
     ReactiveFormsModule
   ],
-  providers: [
-    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }  
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -68,6 +68,10 @@ https://github.com/swimlane/ngx-charts
 Componente para utilizar o recurso de Drag and Drop (clicar e arrastar)
 https://www.npmjs.com/package/ngx-drag-drop
 
+### excel
+Exportação de dados para arquivo do Excel
+https://www.npmjs.com/package/xlsx
+
 ## Projetos para verificar
 - ng-bootstrap <https://ng-bootstrap.github.io>
 - Angular Universal <https://angular.io/guide/universal>
