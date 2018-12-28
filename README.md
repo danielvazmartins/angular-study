@@ -72,6 +72,9 @@ https://www.npmjs.com/package/ngx-drag-drop
 Exportação de dados para arquivo do Excel
 https://www.npmjs.com/package/xlsx
 
+### material-icons-hosting
+Projeto de teste para utilizar o Material Design Icons dentro do projeto, sem utilizar fontes externas
+
 ## Projetos para verificar
 - ng-bootstrap <https://ng-bootstrap.github.io>
 - Angular Universal <https://angular.io/guide/universal>
