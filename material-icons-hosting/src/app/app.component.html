@@ -1,2 +1,25 @@
 <h1>Material Design Icons</h1>
-<i class="material-icons">face</i>
+<div class="box">
+    <div><i *ngFor="let icon of icons" class="material-icons md-18">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-24">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-36">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-48">{{icon}}</i></div>
+</div>
+<div class="box">
+    <div><i *ngFor="let icon of icons" class="material-icons md-18 md-dark">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-24 md-dark">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-36 md-dark">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-48 md-dark">{{icon}}</i></div>
+</div>
+<div class="box black">
+    <div><i *ngFor="let icon of icons" class="material-icons md-18 md-light">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-24 md-light">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-36 md-light">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-48 md-light">{{icon}}</i></div>
+</div>
+<div class="box">
+    <div><i *ngFor="let icon of icons" class="material-icons md-18 color-red">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-24 color-red">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-36 color-red">{{icon}}</i></div>
+    <div><i *ngFor="let icon of icons" class="material-icons md-48 color-red">{{icon}}</i></div>
+</div>

@@ -1,0 +1,14 @@
+:host {
+    .box {
+        border-bottom: 1px solid;
+        padding: 10px;
+
+        &.black {
+            background: #333;
+        }
+
+        .color-red {
+            color: red;
+        }
+    }
+}
